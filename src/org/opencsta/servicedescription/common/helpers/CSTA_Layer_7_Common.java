@@ -158,6 +158,18 @@ public abstract class CSTA_Layer_7_Common extends CSTA_Base{
         sb = sb.insert(0,dev).insert(0,(char)length).insert(0,DEVICE).insert(0,(char)(length+2)).insert(0,SEQUENCE) ;
         return sb ;
     }
+
+    public StringBuffer PhaseI_Device(StringBuffer sb, String dev){
+        int length = dev.length() ;
+        sb = sb.insert(0,dev).insert(0,(char)length).insert(0,'\u0080');
+        return sb ;
+    }
+
+    public StringBuffer PhaseI_62(StringBuffer sb){
+        int length = sb.length() ;
+        sb = sb.insert(0,(char)length).insert(0,PHASEI_62);
+        return sb ;
+    }
     
     /**
      *

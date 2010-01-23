@@ -108,6 +108,8 @@ public abstract class CSTA_Base{
      *
      */
     public char ROSE_RESULT =	'\u00A2' ;
+
+    public char PHASEI_62 = '\u0062' ;
     
     
     /**
