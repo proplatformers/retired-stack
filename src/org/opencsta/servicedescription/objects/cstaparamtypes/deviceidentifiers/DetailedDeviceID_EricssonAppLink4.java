@@ -33,7 +33,7 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base{
      *
      * </p>
      */
-    protected DeviceID deviceID;
+    protected DeviceID_EricssonAppLink4 deviceID;
     
     
     ///////////////////////////////////////
@@ -70,7 +70,7 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base{
      * </p>
      */
     
-    public DeviceID get_deviceID() {
+    public DeviceID_EricssonAppLink4 get_deviceID() {
         // your code here
         return deviceID;
     } // end get_deviceID
@@ -81,7 +81,7 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base{
      * </p>
      */
     public  DetailedDeviceID_EricssonAppLink4() {
-        deviceID = new DeviceID() ;
+        deviceID = new DeviceID_EricssonAppLink4() ;
     } // end DetailedDeviceID
     
     //asterisk
@@ -91,7 +91,7 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base{
     }
     
     private void set_deviceID(String ext){
-        this.deviceID = new DeviceID(ext) ;
+        this.deviceID = new DeviceID_EricssonAppLink4(ext) ;
     }
     
     public String toString(){
