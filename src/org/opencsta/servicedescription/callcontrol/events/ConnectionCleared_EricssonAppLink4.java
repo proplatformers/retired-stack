@@ -216,6 +216,7 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base{
      * </p>
      */
     public StringBuffer set_releasingDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.releasingDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_releasingDevice

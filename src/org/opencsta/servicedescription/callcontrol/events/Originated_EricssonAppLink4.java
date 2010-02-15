@@ -223,7 +223,8 @@ public class Originated_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_callingDevice(StringBuffer curInStr) {        
+    public StringBuffer set_callingDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.callingDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_callingDevice        
@@ -238,7 +239,8 @@ public class Originated_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_calledDevice(StringBuffer curInStr) {        
+    public StringBuffer set_calledDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.calledDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_calledDevice        

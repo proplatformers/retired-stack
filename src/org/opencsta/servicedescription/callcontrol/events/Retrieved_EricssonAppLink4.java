@@ -151,7 +151,8 @@ public class Retrieved_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_retrievingDevice(StringBuffer curInStr) {        
+    public StringBuffer set_retrievingDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.retrievingDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_retrievingDevice        

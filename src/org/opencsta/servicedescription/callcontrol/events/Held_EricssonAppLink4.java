@@ -165,7 +165,8 @@ public class Held_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_holdingDevice(StringBuffer curInStr) {        
+    public StringBuffer set_holdingDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.holdingDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_holdingDevice        

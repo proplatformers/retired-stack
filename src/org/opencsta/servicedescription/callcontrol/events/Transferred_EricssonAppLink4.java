@@ -185,7 +185,8 @@ public class Transferred_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_transferringDevice(StringBuffer curInStr) {        
+    public StringBuffer set_transferringDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.transferringDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_transferringDevice        
@@ -213,7 +214,8 @@ public class Transferred_EricssonAppLink4 extends CallEvent_Base{
  * @param curInStr ...
  * </p>
  */
-    public StringBuffer set_transferredToDevice(StringBuffer curInStr) {        
+    public StringBuffer set_transferredToDevice(StringBuffer curInStr) {
+        curInStr = CheckLengthAndStrip(curInStr, 2) ;
         curInStr = this.transferredToDevice.set_deviceID(curInStr) ;
         return curInStr;
     } // end set_transferredToDevice        
