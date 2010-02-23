@@ -201,7 +201,7 @@ public class Transferred_EricssonAppLink4 extends CallEvent_Base{
  */
     public SubjectDeviceID_EricssonAppLink4 get_transferredToDevice() {
         // your code here
-        return null;
+        return transferredToDevice;
     } // end get_transferredToDevice        
 
 /**

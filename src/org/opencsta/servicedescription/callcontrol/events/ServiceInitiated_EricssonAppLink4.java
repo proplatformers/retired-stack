@@ -85,7 +85,7 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base{
      */
     public ConnectionID_EricssonAppLink4 get_initiatedConnection() {
         // your code here
-        return null;
+        return initiatedConnection;
     } // end get_initiatedConnection
     
     /**
@@ -98,7 +98,7 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base{
      */
     public SubjectDeviceID_EricssonAppLink4 get_initiatingDevice() {
         // your code here
-        return null;
+        return initiatingDevice;
     } // end get_initiatingDevice
     
     /**
@@ -111,7 +111,7 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base{
      */
     public LocalConnectionState get_localConnectionInfo() {
         // your code here
-        return null;
+        return localConnectionInfo;
     } // end get_localConnectionInfo
     
     /**
@@ -213,7 +213,7 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base{
      */
     public EventCause get_cause() {
         // your code here
-        return null;
+        return cause;
     } // end get_cause
     
     /**

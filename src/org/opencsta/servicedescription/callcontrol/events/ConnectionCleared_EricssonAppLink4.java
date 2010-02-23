@@ -128,7 +128,7 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base{
      */
     public ConnectionID_EricssonAppLink4 get_droppedConnection() {
         // your code here
-        return null;
+        return droppedConnection;
     } // end get_droppedConnection
     
     /**
@@ -141,7 +141,7 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base{
      */
     public SubjectDeviceID_EricssonAppLink4 get_releasingDevice() {
         // your code here
-        return null;
+        return releasingDevice;
     } // end get_releasingDevice
     
     /**
@@ -154,7 +154,7 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base{
      */
     public LocalConnectionState get_localConnectionInfo() {
         // your code here
-        return null;
+        return localConnectionInfo;
     } // end get_localConnectionInfo
     
     /**
@@ -167,7 +167,7 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base{
      */
     public EventCause get_cause() {
         // your code here
-        return null;
+        return cause;
     } // end get_cause
     
     /**
