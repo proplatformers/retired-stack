@@ -13,48 +13,45 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.callandconnectionidentifiers;
 
 import org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers.DetailedDeviceID;
 
 /**
- * <p>
- * The device
- * </p>
- * </p>
+ * @author chrismylonas
+ * 
  */
 public class LocalDeviceID extends DetailedDeviceID {
 
+	/**
+	 * 
+	 */
+	public LocalDeviceID() {
+	}
 
-  ///////////////////////////////////////
-  // operations
+	/**
+	 * @param _ext
+	 */
+	public LocalDeviceID(String _ext) {
+		super(_ext);
+	}
 
-
-/**
- * <p>
- * Does ...
- * </p>
- */
-    public  LocalDeviceID() {        
-        // your code here
-    } // end LocalDeviceID        
-
-    public LocalDeviceID(String _ext){
-        super(_ext) ;
-    }
-    
-    //asterisk
-    public String set_deviceID(){
-        String str ;
-        String _tmp = this.deviceID.set_deviceID() ;
-        str = insertSequence(_tmp) ;
-        int length = str.length() ;
-        char[] ar_ddevid = { 0xa1, (char)length} ;
-        return ((new String(ar_ddevid)) + str ) ;
-    }
-} // end LocalDeviceID
-
-
-
+	// asterisk
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers
+	 * .DetailedDeviceID#set_deviceID()
+	 */
+	public String set_deviceID() {
+		String str;
+		String _tmp = this.deviceID.set_deviceID();
+		str = insertSequence(_tmp);
+		int length = str.length();
+		char[] ar_ddevid = { 0xa1, (char) length };
+		return ((new String(ar_ddevid)) + str);
+	}
+}

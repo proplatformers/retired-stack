@@ -62,9 +62,6 @@ public class PhysicalDeviceFeatures_Services_SiemensHipath3000 extends
 		str = Display(str, text, beep);
 		str = Sequence(str);
 		str = str.insert(0, id);
-
-		// StringContains(str, "SetDisplay") ;
-
 		return str;
 	}
 

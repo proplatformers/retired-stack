@@ -13,43 +13,44 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.logicaldevicefeatures.events;
 
+/**
+ * @author chrismylonas
+ * 
+ */
 public class AgentNotReady extends AgentEvent_Base {
-    
-    /**
-     *
-     */
-    private final String eventName = "\n\t*** AGENT NOT READY ***" ;
-    
-    /**
-     *
-     */
-    private final String subjectDeviceName = "\n\t*agent device: " ;
-    
-    /**
-     *
-     */
-    private final String agentIDName = "\n\t*agent id: " ;
-    
-    /**
-     *
-     */
-    private final String deviceName = "\n\t*acdGroup: " ;
-    
-    /**
-     *
-     */
-    public String toString(){
-        String str = eventName + subjectDeviceName + agentDevice.toString() +
-                agentIDName + agentID.toString() +
-                deviceName + acdGroup.toString() ;
-        return str ;
-        
-    }
-} // end AgentNotReady
 
+	/**
+     *
+     */
+	private final String eventName = "\n\t*** AGENT NOT READY ***";
 
+	/**
+     *
+     */
+	private final String subjectDeviceName = "\n\t*agent device: ";
 
+	/**
+     *
+     */
+	private final String agentIDName = "\n\t*agent id: ";
+
+	/**
+     *
+     */
+	private final String deviceName = "\n\t*acdGroup: ";
+
+	/**
+     *
+     */
+	public String toString() {
+		String str = eventName + subjectDeviceName + agentDevice.toString()
+				+ agentIDName + agentID.toString() + deviceName
+				+ acdGroup.toString();
+		return str;
+
+	}
+}

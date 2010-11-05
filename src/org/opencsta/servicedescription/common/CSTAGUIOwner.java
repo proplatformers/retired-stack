@@ -13,19 +13,31 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.common;
 
-public abstract class CSTAGUIOwner extends javax.swing.JFrame implements TDSDisplayInterface{
-    
-//    private au.com.mrvoip.oscsta.client.CSTAClientBase logic;
-    
-    /** Creates a new instance of CSTAGUIOwner */
-    public CSTAGUIOwner() {
-    }
- 
-    public void TDSDataDisplay(String dev, String code, String data) {
-    }
-    
+/**
+ * @author chrismylonas
+ * 
+ */
+public abstract class CSTAGUIOwner extends javax.swing.JFrame implements
+		TDSDisplayInterface {
+
+	/**
+     * 
+     */
+	public CSTAGUIOwner() {
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.opencsta.servicedescription.common.TDSDisplayInterface#TDSDataDisplay
+	 * (java.lang.String, java.lang.String, java.lang.String)
+	 */
+	public void TDSDataDisplay(String dev, String code, String data) {
+	}
+
 }

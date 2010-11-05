@@ -13,86 +13,78 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
 import org.opencsta.servicedescription.objects.cstaparamtypes.switchingfunctionobjects.CSTAObject;
 
 /**
- * ECMA-269 12.3.11:  Identifies or represents a device.
- *
+ * ECMA-269 12.3.11: Identifies or represents a device.
+ * 
  */
-public class DeviceID extends CSTAObject{
-    ///////////////////////////////////////
-    // attributes
-    
-    
-    /**
-     * <p>
-     * device_id variable is...
-     * </p>
-     * </p>
-     */
-    protected String value;
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     *
-     * </p>
-     */
-    public  DeviceID(String device_id) {
-        value = device_id ;
-    } // end DeviceID
-    
-    public DeviceID(){
-        value = "null" ;
-    }
-    /**
-     * <p>
-     * Does ...
-     * </p><p>
-     *
-     * @return a String with ...
-     * </p>
-     */
-    public String get_value() {
-        // your code here
-        return value;
-    } // end get_device_id
-    
-    public String getValue(){
-        return value ;
-    }
-    /**
-     * <p>
-     *
-     * </p>
-     */
-    public StringBuffer set_value(StringBuffer curInStr) {
-        int length = (int)curInStr.charAt(1) ;
-        this.value = curInStr.substring(2, (2+length)) ;
-        curInStr = CheckLengthAndStrip(curInStr, (2+length)) ;
-        return curInStr ;
-    } // end set_device_id
-    
-    public String toString(){
-        return value ;
-    }
-    
-    //asterisk
-    public String set_deviceID(){
-        int length = this.value.length() ;
-        char[] ar_devid = {0x80, (char)length} ;
-        return ( (new String( ar_devid) + this.value ) ) ;
-    }
-    
-} // end DeviceID
+public class DeviceID extends CSTAObject {
 
+	/**
+	 * 
+	 */
+	protected String value;
 
+	/**
+	 * @param device_id
+	 */
+	public DeviceID(String device_id) {
+		value = device_id;
+	}
 
+	/**
+	 * 
+	 */
+	public DeviceID() {
+		value = "null";
+	}
+
+	/**
+	 * @return
+	 */
+	public String get_value() {
+		return value;
+	}
+
+	/**
+	 * @return
+	 */
+	public String getValue() {
+		return value;
+	}
+
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_value(StringBuffer curInStr) {
+		int length = (int) curInStr.charAt(1);
+		this.value = curInStr.substring(2, (2 + length));
+		curInStr = CheckLengthAndStrip(curInStr, (2 + length));
+		return curInStr;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		return value;
+	}
+
+	// asterisk
+	/**
+	 * @return
+	 */
+	public String set_deviceID() {
+		int length = this.value.length();
+		char[] ar_devid = { 0x80, (char) length };
+		return ((new String(ar_devid) + this.value));
+	}
+}

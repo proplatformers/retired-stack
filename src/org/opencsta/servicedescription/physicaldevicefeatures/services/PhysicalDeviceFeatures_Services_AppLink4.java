@@ -23,6 +23,9 @@ package org.opencsta.servicedescription.physicaldevicefeatures.services;
  */
 public class PhysicalDeviceFeatures_Services_AppLink4 {
 
+	/**
+	 * 
+	 */
 	public PhysicalDeviceFeatures_Services_AppLink4() {
 
 	}

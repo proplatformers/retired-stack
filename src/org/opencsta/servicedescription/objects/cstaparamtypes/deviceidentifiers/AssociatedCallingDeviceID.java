@@ -13,33 +13,22 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
 /**
- * ECMA-269 12.3.3: The AssociatedCallingDeviceID parameter type specifies the Network Interface Device (e.g.
- * trunk, CO line) within the switching sub-domain that is associated with the calling
- * device in the call if the call is an external incomnign call.  This parameter shall be
- * included on all external incomign calls.
- *
+ * ECMA-269 12.3.3: The AssociatedCallingDeviceID parameter type specifies the
+ * Network Interface Device (e.g. trunk, CO line) within the switching
+ * sub-domain that is associated with the calling device in the call if the call
+ * is an external incomnign call. This parameter shall be included on all
+ * external incomign calls.
+ * 
  */
 public class AssociatedCallingDeviceID extends DetailedDeviceID {
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p>
-     */
-    public  AssociatedCallingDeviceID() {
-        // your code here
-    } // end AssociatedCallingDeviceID
-    
-} // end AssociatedCallingDeviceID
 
-
-
+	/**
+	 * 
+	 */
+	public AssociatedCallingDeviceID() {
+	}
+}

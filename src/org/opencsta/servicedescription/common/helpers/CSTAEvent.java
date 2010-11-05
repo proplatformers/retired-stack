@@ -13,18 +13,22 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.common.helpers;
 
 import org.opencsta.servicedescription.objects.cstaparamtypes.switchingfunctionobjects.CSTAObject;
 
-public class CSTAEvent extends CSTA_Base{
-    
-    /**
-     * Creates a new instance of CSTAEvent
-     *
-     */
-    public CSTAEvent(){
-    }
+/**
+ * @author chrismylonas
+ * 
+ */
+public class CSTAEvent extends CSTA_Base {
+
+	/**
+	 * Creates a new instance of CSTAEvent
+	 * 
+	 */
+	public CSTAEvent() {
+	}
 }

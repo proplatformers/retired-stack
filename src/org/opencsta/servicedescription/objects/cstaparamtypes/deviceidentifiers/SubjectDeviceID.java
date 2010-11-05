@@ -13,46 +13,28 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
-
 /**
- * ECMA-269 12.3.30: The SubjectDeviceID parameter type represents a device which is the focus of the action
- * associated with the event being reported.
- *
+ * ECMA-269 12.3.30: The SubjectDeviceID parameter type represents a device
+ * which is the focus of the action associated with the event being reported.
+ * 
  */
 public class SubjectDeviceID extends DetailedDeviceID {
-    
-    ///////////////////////////////////////
-    // associations
-    
-    /**
-     * <p>
-     *
-     * </p>
+
+	/**
+     * 
      */
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p>
-     */
-    public  SubjectDeviceID() {
-        super() ;
-        // your code here
-    } // end SubjectDeviceID
-    
-    public SubjectDeviceID(String ext){
-        super(ext) ;
-    }
-} // end SubjectDeviceID
+	public SubjectDeviceID() {
+		super();
+	}
 
-
-
+	/**
+	 * @param ext
+	 */
+	public SubjectDeviceID(String ext) {
+		super(ext);
+	}
+}

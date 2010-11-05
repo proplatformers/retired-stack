@@ -13,22 +13,32 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.security;
 
 /**
- *
- * @author cm
+ * 
+ * @author chrismylonas
  */
 public class TimeInfo {
-    String value ;
-    /** Creates a new instance of TimeInfo */
-    public TimeInfo(String _time) {
-        value = _time ;
-    }
-    
-    public String getValue(){
-        return value ;
-    }
+
+	/**
+	 * 
+	 */
+	String value;
+
+	/**
+	 * @param _time
+	 */
+	public TimeInfo(String _time) {
+		value = _time;
+	}
+
+	/**
+	 * @return
+	 */
+	public String getValue() {
+		return value;
+	}
 }

@@ -13,17 +13,21 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 package org.opencsta.servicedescription.objects.cstaparamtypes.otherparameters;
 
 /**
- * ECMA-269 12.2.5:  The CallLinkageData parameter type contains globally unique information that is used to associated
- * CSTA calls that are linked by a switchign function because of the way that a call was created or manipulated.
- * For example, a call that is created as teh result of the CSTA Consultation Call service (consulted call) may be linked to the
- * call placed on hold at the consultation device by the CallLinkageData parameter type.  The CallLinkageData parameter
- * type can also be used to correlate calls in different switchign sub-domains with teh same "end-to-end" or "global" call.
- * This definition goes on for a bit so check out the standard if you wanna know more...
+ * ECMA-269 12.2.5: The CallLinkageData parameter type contains globally unique
+ * information that is used to associated CSTA calls that are linked by a
+ * switchign function because of the way that a call was created or manipulated.
+ * For example, a call that is created as teh result of the CSTA Consultation
+ * Call service (consulted call) may be linked to the call placed on hold at the
+ * consultation device by the CallLinkageData parameter type. The
+ * CallLinkageData parameter type can also be used to correlate calls in
+ * different switchign sub-domains with teh same "end-to-end" or "global" call.
+ * This definition goes on for a bit so check out the standard if you wanna know
+ * more...
  * 
  */
 public class CallLinkageID {
- }
+}

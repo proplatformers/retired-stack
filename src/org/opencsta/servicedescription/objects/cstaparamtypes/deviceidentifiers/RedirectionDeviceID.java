@@ -13,34 +13,18 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
-
 /**
- * ECMA-269 12.3.24: The RedirectionDeviceID parameter type describes the last device known by the switching function
- * from which the current call was routed.  "Routed" includes forwarded from, diverted from, or redirected from.
- *
+ * ECMA-269 12.3.24: The RedirectionDeviceID parameter type describes the last
+ * device known by the switching function from which the current call was
+ * routed. "Routed" includes forwarded from, diverted from, or redirected from.
+ * 
  */
 public class RedirectionDeviceID extends DetailedDeviceID {
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     *
-     * </p>
-     */
-    public  RedirectionDeviceID() {
-        // your code here
-    } // end RedirectionDeviceID
-    
-} // end RedirectionDeviceID
 
-
-
+	public RedirectionDeviceID() {
+	}
+}

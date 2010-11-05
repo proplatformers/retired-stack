@@ -13,46 +13,29 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
-
 /**
- * ECMA-269 12.3.30: The SubjectDeviceID parameter type represents a device which is the focus of the action
- * associated with the event being reported.
- *
+ * ECMA-269 12.3.30: The SubjectDeviceID parameter type represents a device
+ * which is the focus of the action associated with the event being reported.
+ * 
  */
-public class SubjectDeviceID_EricssonAppLink4 extends DetailedDeviceID_EricssonAppLink4 {
-    
-    ///////////////////////////////////////
-    // associations
-    
-    /**
-     * <p>
-     *
-     * </p>
-     */
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p>
-     */
-    public  SubjectDeviceID_EricssonAppLink4() {
-        super() ;
-        // your code here
-    } // end SubjectDeviceID
-    
-    public SubjectDeviceID_EricssonAppLink4(String ext){
-        super(ext) ;
-    }
-} // end SubjectDeviceID
+public class SubjectDeviceID_EricssonAppLink4 extends
+		DetailedDeviceID_EricssonAppLink4 {
 
+	/**
+	 * 
+	 */
+	public SubjectDeviceID_EricssonAppLink4() {
+		super();
+	}
 
-
+	/**
+	 * @param ext
+	 */
+	public SubjectDeviceID_EricssonAppLink4(String ext) {
+		super(ext);
+	}
+}

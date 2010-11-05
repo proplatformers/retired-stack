@@ -13,30 +13,20 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
 /**
- * ECMA-269 12.3.7: The CalllingDeviceID parameter type specifies the calling device associated with the call.
- *
+ * ECMA-269 12.3.7: The CalllingDeviceID parameter type specifies the calling
+ * device associated with the call.
+ * 
  */
-public class CallingDeviceID_EricssonAppLink4 extends DetailedDeviceID_EricssonAppLink4 {
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p>
-     */
-    public  CallingDeviceID_EricssonAppLink4() {
-        // your code here
-    } // end CallingDeviceID
-    
-} // end CallingDeviceID
+public class CallingDeviceID_EricssonAppLink4 extends
+		DetailedDeviceID_EricssonAppLink4 {
 
-
-
+	/**
+	 * 
+	 */
+	public CallingDeviceID_EricssonAppLink4() {
+	}
+}

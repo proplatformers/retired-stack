@@ -13,16 +13,18 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.otherparameters;
 
 /**
- * ECMA-269 12.2.26:  The TimeInfo parameter type provides the calendar date and the time of day.  There are three
- * possible value representations:  as local time, coordinated universal time, or as local time with a time differential factor.
- * All representations use a four character representation of the year.
- * The format is based upon the GeneralisedTime as defined in ISO/IEC 8824 - (but i haven't checked it!)
+ * ECMA-269 12.2.26: The TimeInfo parameter type provides the calendar date and
+ * the time of day. There are three possible value representations: as local
+ * time, coordinated universal time, or as local time with a time differential
+ * factor. All representations use a four character representation of the year.
+ * The format is based upon the GeneralisedTime as defined in ISO/IEC 8824 -
+ * (but i haven't checked it!)
  * 
  */
 public class TimeInfo {
- }
+}

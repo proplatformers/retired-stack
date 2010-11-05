@@ -13,18 +13,14 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.statusreporting;
 
-
 /**
- * ECMA-269 12.2.21:
- * The MonitorFilter parameter type specifies the list of events that are filtered (not sent) for a specific monitor.
+ * ECMA-269 12.2.21: The MonitorFilter parameter type specifies the list of
+ * events that are filtered (not sent) for a specific monitor.
  * 
  */
 public class MonitorFilter {
-} // end MonitorFilter
-
-
-
+}

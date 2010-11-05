@@ -143,16 +143,28 @@ import org.opencsta.servicedescription.common.helpers.CSTA_Base;
  */
 public class EventCause extends CSTA_Base{
 
+    /**
+     * 
+     */
     private char value;
 
+    /**
+     * @param eventCause
+     */
     public  EventCause(char eventCause) {
         this.value = eventCause ;
     }
 
+    /**
+     * 
+     */
     public EventCause(){
     }
     
 
+    /**
+     * @param _str_cause
+     */
     public EventCause(String _str_cause){
         System.out.println("_SEPT 05: New SI's cause") ;
         this.value = StringToChar(_str_cause) ;

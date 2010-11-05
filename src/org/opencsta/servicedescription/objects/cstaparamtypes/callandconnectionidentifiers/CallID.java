@@ -13,116 +13,91 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.callandconnectionidentifiers;
 
 import org.opencsta.servicedescription.common.helpers.CSTA_Base;
 
 /**
- * <p>
- * Note:  The CallID must have always a length of 2 bytes in the CSTA implementation of Hicom 150
- * </p>
- * </p>
+ * @author chrismylonas
+ * 
  */
-public class CallID extends CSTA_Base{
-    
-    ///////////////////////////////////////
-    // attributes
-    
-    
-    /**
-     * <p>
-     * Represents ...
-     * </p>
-     */
-    private String value;
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p><p>
-     *
-     * @param call_id ...
-     * </p>
-     */
-    public  CallID(String call_id) {
-        this.value = call_id ;
-    } // end CallID
-    
-    /**
-     *
-     */
-    public CallID(){
-    }
-    
-    /**
-     *
-     */
-    public String get_value(){
-        return value ;
-    }
-    
-    /**
-     *
-     * @return
-     * @param curInStr
-     */
-    public StringBuffer set_value(StringBuffer curInStr){
-        int length = (int)curInStr.charAt(1) ;
-        this.value = curInStr.substring(2, (2+length)) ;
-        curInStr = CheckLengthAndStrip(curInStr, (2+length)) ;
-        return curInStr ;
-    }
-    
-    /**
-     *
-     * @return
-     */
-    public String toString(){
-        String str = toLegibleString(value) ;
-        return str ;
-    }
-    
-    /**
-     *
-     * @return
-     * @param str
-     */
-    public String toLegibleString(String str){
-        try{
-            StringBuffer sb = new StringBuffer() ;
-            for(int i = 0 ; i < str.length() ; i++){
-                String tmp = Integer.toHexString(str.charAt(i)) ;
-                if( tmp.length() == 1 )
-                    sb = sb.append("0").append(tmp) ;
-                else
-                    sb = sb.append(tmp) ;
-            }
-            str = sb.toString() ;
-            return str ;
-        }catch(NullPointerException e){
-            return "null" ;
-        }
-    }
-    
-    /**
-     * used in asterisk integration
-     *
-     *@return
-     */
-    public String set_callID(){
-        int length = this.value.length() ;
-        char[] ar_callid = {0x80, (char)length} ;
-        return ( (new String( ar_callid) + this.value ) ) ;
-    }
-} // end CallID
+public class CallID extends CSTA_Base {
 
+	/**
+	 * 
+	 */
+	private String value;
 
+	/**
+	 * @param call_id
+	 */
+	public CallID(String call_id) {
+		this.value = call_id;
+	}
 
+	/**
+	 * 
+	 */
+	public CallID() {
+	}
+
+	/**
+	 * @return
+	 */
+	public String get_value() {
+		return value;
+	}
+
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_value(StringBuffer curInStr) {
+		int length = (int) curInStr.charAt(1);
+		this.value = curInStr.substring(2, (2 + length));
+		curInStr = CheckLengthAndStrip(curInStr, (2 + length));
+		return curInStr;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		String str = toLegibleString(value);
+		return str;
+	}
+
+	/**
+	 * @param str
+	 * @return
+	 */
+	public String toLegibleString(String str) {
+		try {
+			StringBuffer sb = new StringBuffer();
+			for (int i = 0; i < str.length(); i++) {
+				String tmp = Integer.toHexString(str.charAt(i));
+				if (tmp.length() == 1)
+					sb = sb.append("0").append(tmp);
+				else
+					sb = sb.append(tmp);
+			}
+			str = sb.toString();
+			return str;
+		} catch (NullPointerException e) {
+			return "null";
+		}
+	}
+
+	/**
+	 * @return
+	 */
+	public String set_callID() {
+		int length = this.value.length();
+		char[] ar_callid = { 0x80, (char) length };
+		return ((new String(ar_callid) + this.value));
+	}
+}

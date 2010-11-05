@@ -13,49 +13,55 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.common.helpers;
 
+/**
+ * @author chrismylonas
+ * 
+ */
 public interface CSTA_BaseInterface {
-    
-    /**
-     *
-     *
-     *
-     * @param thisString
-     * @param label
-     */
-    public void StringContains(StringBuffer thisString, String label) ;
-    
-    /**
-     *
-     *
-     *
-     * @return
-     * @param curInStr
-     * @param bytes
-     */
-    public StringBuffer DeleteChars(StringBuffer curInStr, int bytes) ;
-    
-    /**
-     *
-     *
-     *
-     * @return
-     * @param curInStr
-     * @param bytes
-     * @param output
-     */
-    public StringBuffer DeleteChars(StringBuffer curInStr, int bytes, String output);
-    
-    /**
-     *
-     *
-     *
-     * @return
-     * @param curInStr
-     * @param normalCase
-     */
-    public StringBuffer CheckLengthAndStrip(StringBuffer curInStr, int normalCase);
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @param thisString
+	 * @param label
+	 */
+	public void StringContains(StringBuffer thisString, String label);
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @return
+	 * @param curInStr
+	 * @param bytes
+	 */
+	public StringBuffer DeleteChars(StringBuffer curInStr, int bytes);
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @return
+	 * @param curInStr
+	 * @param bytes
+	 * @param output
+	 */
+	public StringBuffer DeleteChars(StringBuffer curInStr, int bytes,
+			String output);
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @return
+	 * @param curInStr
+	 * @param normalCase
+	 */
+	public StringBuffer CheckLengthAndStrip(StringBuffer curInStr,
+			int normalCase);
 }

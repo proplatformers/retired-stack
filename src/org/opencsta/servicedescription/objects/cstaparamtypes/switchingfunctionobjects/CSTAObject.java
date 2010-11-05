@@ -20,9 +20,8 @@ package org.opencsta.servicedescription.objects.cstaparamtypes.switchingfunction
 import org.opencsta.servicedescription.common.helpers.CSTA_Base;
 
 /**
- * Just a general CSTA Object
+ * @author chrismylonas
  * 
  */
 public abstract class CSTAObject extends CSTA_Base {
-
 }

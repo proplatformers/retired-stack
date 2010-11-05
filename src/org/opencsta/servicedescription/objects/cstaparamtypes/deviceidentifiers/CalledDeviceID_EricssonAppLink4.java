@@ -13,31 +13,17 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 package org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers;
 
-
 /**
- * ECMA-269 12.3.6: A device identifier of the CalledDeviceID type describes the originally called device associated with a call.
- *
+ * ECMA-269 12.3.6: A device identifier of the CalledDeviceID type describes the
+ * originally called device associated with a call.
+ * 
  */
-public class CalledDeviceID_EricssonAppLink4 extends DetailedDeviceID_EricssonAppLink4 {
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p>
-     */
-    public  CalledDeviceID_EricssonAppLink4() {
-        // your code here
-    } // end CalledDeviceID
-    
-} // end CalledDeviceID
+public class CalledDeviceID_EricssonAppLink4 extends
+		DetailedDeviceID_EricssonAppLink4 {
 
-
-
+	public CalledDeviceID_EricssonAppLink4() {
+	}
+}

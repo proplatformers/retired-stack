@@ -18,9 +18,16 @@ This file is part of Open CSTA.
 package org.opencsta.servicedescription.physicaldevicefeatures.services;
 
 /**
- *
+ * 
  * @author chrismylonas
  */
 public interface PhysicalDeviceFeatures_Services {
-    public StringBuffer SetDisplay(String dev, String text, boolean beep) ;
+
+	/**
+	 * @param dev
+	 * @param text
+	 * @param beep
+	 * @return
+	 */
+	public StringBuffer SetDisplay(String dev, String text, boolean beep);
 }

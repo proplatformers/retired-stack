@@ -13,19 +13,23 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.statusreporting;
 
 import org.opencsta.servicedescription.objects.cstaparamtypes.switchingfunctionobjects.CSTAObject;
+
 /**
- * Siemens (& other companies?) specific??
- * Note:  Valid CSTAObjects are Stations (analogue Station, digital Handsets), Trunks
- * and UCD groups.  Monitoring of other objects is not provided.
+ * Siemens (& other companies?) specific?? Note: Valid CSTAObjects are Stations
+ * (analogue Station, digital Handsets), Trunks and UCD groups. Monitoring of
+ * other objects is not provided.
  * 
  */
 public abstract class MonitorObject {
 
-    protected CSTAObject csta_object; 
+	/**
+     * 
+     */
+	protected CSTAObject csta_object;
 
-} // end MonitorObject
+}

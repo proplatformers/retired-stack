@@ -13,8 +13,7 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 /** Java class "AgentID.java" generated from Poseidon for UML.
  *  Poseidon for UML is developed by <A HREF="http://www.gentleware.com">Gentleware</A>.
@@ -26,62 +25,39 @@ import org.opencsta.servicedescription.common.helpers.CSTA_Base;
 
 /**
  * ECMA-269 12.3.1: AgentID parameter type identifies an ACD agent
- *
+ * 
  */
-public class AgentID extends CSTA_Base{
-    
-    ///////////////////////////////////////
-    // attributes
-    
-    
-    /**
-     * <p>
-     * Represents ...
-     * </p>
-     */
-    protected String value;
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p><p>
-     *
-     * @return a String with ...
-     * </p>
-     */
-    public String getValue() {
-        return value;
-    } // end getValue
-    
-    /**
-     * <p>
-     * Does ...
-     * </p><p>
-     *
-     * </p><p>
-     * @return
-     * @param _value ...
-     * </p>
-     */
-    public StringBuffer setValue(StringBuffer curInStr) {
-        int length = (int)curInStr.charAt(1) ;
-        this.value = curInStr.substring(2, (2+length)) ;
-        curInStr = CheckLengthAndStrip(curInStr, (2+length)) ;
-        return curInStr ;
-    } // end setValue
-    
-    /**
-     *
-     * @return
-     */
-    public String toString(){
-        return value ;
-    }
-} // end AgentID
+public class AgentID extends CSTA_Base {
 
+	/**
+	 * 
+	 */
+	protected String value;
 
+	/**
+	 * @return
+	 */
+	public String getValue() {
+		return value;
+	}
 
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer setValue(StringBuffer curInStr) {
+		int length = (int) curInStr.charAt(1);
+		this.value = curInStr.substring(2, (2 + length));
+		curInStr = CheckLengthAndStrip(curInStr, (2 + length));
+		return curInStr;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		return value;
+	}
+}
