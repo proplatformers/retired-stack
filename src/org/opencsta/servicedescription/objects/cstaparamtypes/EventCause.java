@@ -142,48 +142,17 @@ import org.opencsta.servicedescription.common.helpers.CSTA_Base;
  *
  */
 public class EventCause extends CSTA_Base{
-    
-    ///////////////////////////////////////
-    // attributes
-    
-    
-    /**
-     * <p>
-     * Represents ...
-     * </p>
-     */
+
     private char value;
-    
-    
-    ///////////////////////////////////////
-    // operations
-    
-    
-    /**
-     * <p>
-     * Does ...
-     * </p><p>
-     *
-     * </p><p>
-     *
-     * @param eventCause ...
-     * </p>
-     */
+
     public  EventCause(char eventCause) {
         this.value = eventCause ;
-    } // end EventCause
-    
-    /**
-     *
-     */
+    }
+
     public EventCause(){
     }
     
-    /**
-     * this constructor is used for asterisk
-     *
-     * @param _str_cause
-     */
+
     public EventCause(String _str_cause){
         System.out.println("_SEPT 05: New SI's cause") ;
         this.value = StringToChar(_str_cause) ;
@@ -337,7 +306,4 @@ public class EventCause extends CSTA_Base{
         return str ;
     }
     
-} // end EventCause
-
-
-
+}

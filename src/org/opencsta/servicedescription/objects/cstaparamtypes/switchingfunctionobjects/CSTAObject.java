@@ -13,25 +13,16 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 package org.opencsta.servicedescription.objects.cstaparamtypes.switchingfunctionobjects;
 
-/** Java class "CSTAObject.java" generated from Poseidon for UML.
- *  Poseidon for UML is developed by <A HREF="http://www.gentleware.com">Gentleware</A>.
- *  Generated with <A HREF="http://jakarta.apache.org/velocity/">velocity</A> template engine.
- */
-
 import org.opencsta.servicedescription.common.helpers.CSTA_Base;
+
 /**
  * Just a general CSTA Object
  * 
  */
 public abstract class CSTAObject extends CSTA_Base {
 
-} // end CSTAObject
-
-
-
-
+}

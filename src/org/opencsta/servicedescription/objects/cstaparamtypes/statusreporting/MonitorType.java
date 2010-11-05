@@ -19,7 +19,4 @@ package org.opencsta.servicedescription.objects.cstaparamtypes.statusreporting;
 
 
 public class MonitorType {
-} // end MonitorType
-
-
-
+}
