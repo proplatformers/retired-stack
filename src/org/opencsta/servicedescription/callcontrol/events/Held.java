@@ -13,8 +13,7 @@ This file is part of Open CSTA.
 
     You should have received a copy of the GNU Lesser General Public License
     along with Open CSTA.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
+ */
 
 package org.opencsta.servicedescription.callcontrol.events;
 
@@ -24,203 +23,171 @@ import org.opencsta.servicedescription.objects.cstaparamtypes.connectionstates.L
 import org.opencsta.servicedescription.objects.cstaparamtypes.deviceidentifiers.SubjectDeviceID;
 
 /**
- * <p>
- * The Held event indicates that a call has been placed on hold.
- * </p>
- * <p>
- * Common situations that generate this event include:
- * </p>
- * <p>
- *   - Consultation situations (manual and service initated)
- * </p>
- * <p>
- *   - Hold situations (manual and service initated).
- * </p>
- * </p>
- */
-public class Held extends CallEvent_Base{
-
-   ///////////////////////////////////////
-   // associations
-
-/**
- * <p>
+ * @author chrismylonas
  * 
- * </p>
  */
-    private ConnectionID heldConnection; 
-/**
- * <p>
- * 
- * </p>
- */
-    private SubjectDeviceID holdingDevice; 
-/**
- * <p>
- * 
- * </p>
- */
-    private LocalConnectionState localConnectionInfo; 
-/**
- * <p>
- * 
- * </p>
- */
-    private EventCause cause; 
+public class Held extends CallEvent_Base {
 
-    private final String eventName = "\n\t*** HELD ***" ;
-    private final String connectionName = "\n\t*held connection: " ;
-    private final String subjectDeviceName = "\n\t*holding device: " ;
-    private final String localConnectionStateName = "\n\t*local connection info: " ;
-    private final String eventCauseName = "\n\t*cause: " ;
+	/**
+	 * 
+	 */
+	private ConnectionID heldConnection;
 
-  ///////////////////////////////////////
-  // operations
+	/**
+     * 
+     */
+	private SubjectDeviceID holdingDevice;
 
+	/**
+     * 
+     */
+	private LocalConnectionState localConnectionInfo;
 
-/**
- * <p>
- * 
- * </p>
- */
-    public  Held() {        
-        heldConnection = new ConnectionID() ;
-        holdingDevice = new SubjectDeviceID() ;
-        localConnectionInfo = new LocalConnectionState() ;
-        cause = new EventCause() ;
-    } // end Held        
+	/**
+     * 
+     */
+	private EventCause cause;
 
-/**
- * <p>
- * Does ...
- * </p><p>
- * 
- * @return a ConnectionID with ...
- * </p>
- */
-    public ConnectionID get_heldConnection() {        
-        // your code here
-        return heldConnection;
-    } // end get_heldConnection        
+	/**
+     * 
+     */
+	private final String eventName = "\n\t*** HELD ***";
 
-/**
- * <p>
- * Does ...
- * </p><p>
- * 
- * @return a SubjectDeviceID with ...
- * </p>
- */
-    public SubjectDeviceID get_holdingDevice() {        
-        // your code here
-        return holdingDevice;
-    } // end get_holdingDevice        
+	/**
+     * 
+     */
+	private final String connectionName = "\n\t*held connection: ";
 
-/**
- * <p>
- * 
- * </p>
- */
-    public LocalConnectionState get_localConnectionInfo() {        
-        // your code here
-        return localConnectionInfo;
-    } // end get_localConnectionInfo        
+	/**
+     * 
+     */
+	private final String subjectDeviceName = "\n\t*holding device: ";
 
-/**
- * <p>
- * Does ...
- * </p><p>
- * 
- * @return a EventCause with ...
- * </p>
- */
-    public EventCause get_cause() {        
-        // your code here
-        return cause;
-    } // end get_cause        
+	/**
+     * 
+     */
+	private final String localConnectionStateName = "\n\t*local connection info: ";
 
-/**
- * <p>
- * Does ...
- * </p><p>
- * 
- * @return a StringBuffer with ...
- * </p><p>
- * @param curInStr ...
- * </p>
- */
-    public StringBuffer set_heldConnection(StringBuffer curInStr) {        
-        curInStr = CheckLengthAndStrip(curInStr, 4) ;
-        curInStr = this.heldConnection.set_connectionID(curInStr) ;
-        return curInStr;
-    } // end set_heldConnection        
+	/**
+     * 
+     */
+	private final String eventCauseName = "\n\t*cause: ";
 
-/**
- * <p>
- * Does ...
- * </p><p>
- * 
- * @return a StringBuffer with ...
- * </p><p>
- * @param curInStr ...
- * </p>
- */
-    public StringBuffer set_holdingDevice(StringBuffer curInStr) {        
-        curInStr = this.holdingDevice.set_deviceID(curInStr) ;
-        return curInStr;
-    } // end set_holdingDevice        
+	/**
+     * 
+     */
+	public Held() {
+		heldConnection = new ConnectionID();
+		holdingDevice = new SubjectDeviceID();
+		localConnectionInfo = new LocalConnectionState();
+		cause = new EventCause();
+	}
 
-/**
- * <p>
- * 
- * </p>
- */
-    public StringBuffer set_localConnectionInfo(StringBuffer curInStr) {        
-        curInStr = this.localConnectionInfo.set_value(curInStr) ;
-        return curInStr;
-    } // end set_localConnectionInfo        
+	/**
+	 * @return
+	 */
+	public ConnectionID get_heldConnection() {
+		return heldConnection;
+	}
 
-/**
- * <p>
- * 
- * </p>
- */
-    public StringBuffer set_cause(StringBuffer curInStr) {        
-        curInStr = this.cause.set_value(curInStr) ;
-        return curInStr;
-    } // end set_cause        
+	/**
+	 * @return
+	 */
+	public SubjectDeviceID get_holdingDevice() {
+		return holdingDevice;
+	}
 
-    public void workString(StringBuffer curInStr){
-        //cut off anything that was used prior to this (i.e. layer 7 used info)
-        curInStr = CheckLengthAndStrip(curInStr, 2) ;
+	/**
+	 * @return
+	 */
+	public LocalConnectionState get_localConnectionInfo() {
+		return localConnectionInfo;
+	}
 
-        //TEMP FIX for timestamp & global connection ID stuff
-        int tmp_count = 0 ;
-        while( curInStr.length() != 0 ){
-            if( curInStr.charAt(0) == 0x6B )
-                curInStr = this.set_heldConnection(curInStr) ;
-            if( curInStr.charAt(0) == 0x63 )
-                curInStr = this.set_holdingDevice(curInStr) ;
-            if( curInStr.charAt(0) == 0x4E )
-                curInStr = this.set_localConnectionInfo(curInStr) ;
-            if( curInStr.charAt(0) == 0x0A )
-                curInStr = this.set_cause(curInStr) ;
-            
-            tmp_count++ ;
-            if( tmp_count > 8 )
-                curInStr = new StringBuffer() ;
-        }
-    }
-    
-    public String toString(){
-        String str = eventName + connectionName + heldConnection.toString() +
-                    subjectDeviceName + holdingDevice.toString() +
-                    localConnectionStateName + localConnectionInfo.toString() + 
-                    eventCauseName + cause.toString() ;
-        return str ;
-        
-    }
-} // end Held
+	/**
+	 * @return
+	 */
+	public EventCause get_cause() {
+		return cause;
+	}
 
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_heldConnection(StringBuffer curInStr) {
+		curInStr = CheckLengthAndStrip(curInStr, 4);
+		curInStr = this.heldConnection.set_connectionID(curInStr);
+		return curInStr;
+	}
 
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_holdingDevice(StringBuffer curInStr) {
+		curInStr = this.holdingDevice.set_deviceID(curInStr);
+		return curInStr;
+	}
 
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_localConnectionInfo(StringBuffer curInStr) {
+		curInStr = this.localConnectionInfo.set_value(curInStr);
+		return curInStr;
+	}
+
+	/**
+	 * @param curInStr
+	 * @return
+	 */
+	public StringBuffer set_cause(StringBuffer curInStr) {
+		curInStr = this.cause.set_value(curInStr);
+		return curInStr;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * org.opencsta.servicedescription.callcontrol.events.CallEvent_Base#workString
+	 * (java.lang.StringBuffer)
+	 */
+	public void workString(StringBuffer curInStr) {
+		// cut off anything that was used prior to this (i.e. layer 7 used info)
+		curInStr = CheckLengthAndStrip(curInStr, 2);
+
+		// TEMP FIX for timestamp & global connection ID stuff
+		int tmp_count = 0;
+		while (curInStr.length() != 0) {
+			if (curInStr.charAt(0) == 0x6B)
+				curInStr = this.set_heldConnection(curInStr);
+			if (curInStr.charAt(0) == 0x63)
+				curInStr = this.set_holdingDevice(curInStr);
+			if (curInStr.charAt(0) == 0x4E)
+				curInStr = this.set_localConnectionInfo(curInStr);
+			if (curInStr.charAt(0) == 0x0A)
+				curInStr = this.set_cause(curInStr);
+
+			tmp_count++;
+			if (tmp_count > 8)
+				curInStr = new StringBuffer();
+		}
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		String str = eventName + connectionName + heldConnection.toString()
+				+ subjectDeviceName + holdingDevice.toString()
+				+ localConnectionStateName + localConnectionInfo.toString()
+				+ eventCauseName + cause.toString();
+		return str;
+
+	}
+}
