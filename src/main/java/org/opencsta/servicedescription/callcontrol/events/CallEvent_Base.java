@@ -22,7 +22,7 @@ import org.opencsta.servicedescription.common.helpers.CSTAEvent;
 
 /**
  * @author chrismylonas
- *
+ * 
  */
 public abstract class CallEvent_Base extends CSTAEvent implements CallEvent {
 
@@ -35,14 +35,14 @@ public abstract class CallEvent_Base extends CSTAEvent implements CallEvent {
 
 	/**
 	 * 
-	 * 
+	 * Used mainly in GUI applications to transform a CallId into a
+	 * legible-human-readable string.
 	 * 
 	 * @return
 	 * @param str
 	 */
 	public String Call_ID_String_Correction(String str) {
 		try {
-			// int i ;
 			StringBuffer foo = new StringBuffer();
 			for (int j = 0; j < str.length(); j++) {
 				if ((int) str.charAt(j) < 10)
@@ -55,13 +55,15 @@ public abstract class CallEvent_Base extends CSTAEvent implements CallEvent {
 			String call_id = new String(foo);
 			return call_id;
 		} catch (NullPointerException e) {
+			e.printStackTrace();
 			return "";
 		}
 	}
 
 	/**
 	 * 
-	 * 
+	 * This method is used to cycle through a string and work through it,
+	 * breaking it down into CSTA data structures.
 	 * 
 	 * @param curInStr
 	 */

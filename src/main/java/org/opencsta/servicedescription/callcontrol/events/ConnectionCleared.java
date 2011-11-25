@@ -92,7 +92,6 @@ public class ConnectionCleared extends CallEvent_Base {
 	public ConnectionCleared(String _ext, String _call_id, String _time) {
 		// do nothing with the time until we have it done from the siemens
 		// and then reverse the process for asterisk
-		System.out.println("_SEPT 05: New ConnectionCleared");
 		cause = new EventCause("normalClearing");// new call = 0x16/22
 		localConnectionInfo = new LocalConnectionState("null");
 		releasingDevice = new SubjectDeviceID(_ext);
