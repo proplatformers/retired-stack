@@ -78,7 +78,6 @@ public class DeviceID extends CSTAObject {
 		return value;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */

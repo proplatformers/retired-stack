@@ -59,7 +59,6 @@ public abstract class DetailedDeviceID extends CSTA_Base {
 		deviceID = new DeviceID();
 	}
 
-	// asterisk
 	/**
 	 * @param _ext
 	 */
@@ -85,7 +84,6 @@ public abstract class DetailedDeviceID extends CSTA_Base {
 		return str;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */

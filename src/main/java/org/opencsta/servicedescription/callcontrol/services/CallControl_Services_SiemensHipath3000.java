@@ -25,11 +25,7 @@ import org.opencsta.servicedescription.common.helpers.CSTA_Layer_7_Common;
  * @author  mylo
  */
 public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
-    
-    //private Client_CSTA_Layer7 cl7;//client layer 7
-    //private CSTA_Layer7 sl7 ;//server layer 7
-//    CSTA_Layer_7_Common parent ;//common layer 7
-    
+        
     /**
      * Creates a new instance of CallControl_Services
      *
@@ -37,7 +33,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
      * @param lyr7
      */
     public CallControl_Services_SiemensHipath3000(CSTA_Layer_7_Common lyr7) {
-//        this.parent = lyr7 ;
     }
     
     /**
@@ -46,10 +41,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
      */
     public CallControl_Services_SiemensHipath3000(){
     }
-    
-    //public CallControl_Services(CSTA_Layer7 lyr7){
-    //  this.sl7 = lyr7 ;
-    //}
     
     /**
      *
@@ -68,8 +59,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = Device(str, dev1) ; //DEVICE FROM
         str = Sequence(str) ;
         str = str.insert(0,id) ; //SERVICE ID
-        
-        //StringContains(str, "MakeCall") ;
         
         return str ;
     }
@@ -96,9 +85,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = Connection_ID2(str) ;
         str = Sequence(str) ;
         str = str.insert(0,id) ;
-        
-        //StringContains(str, "Ans Call") ;
-        
         return str ;
         
     }
@@ -124,10 +110,7 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = str.insert(0,call_id) ;
         str = Connection_ID2(str) ;
         str = Sequence(str) ;
-        str = str.insert(0,id) ;
-        
-        //StringContains(str, "HoldCall") ;
-        
+        str = str.insert(0,id) ;        
         return str ;
     }
     
@@ -152,9 +135,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = Connection_ID2(str) ;
         str = Sequence(str) ;
         str = str.insert(0,id) ;
-        
-        //StringContains(str, "RetrieveCall") ;
-        
         return str ;
     }
     
@@ -183,9 +163,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = str.append(tmp_devTo) ;
         str = Sequence(str) ;
         str = str.insert(0, id) ;
-        
-        //StringContains(str, "SSTransfer") ;
-        
         return str ;
     }
     
@@ -217,9 +194,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         
         str = Sequence(str) ;
         str = str.insert(0, id) ;
-        
-        //StringContains(str,"DeflectCall") ;
-        
         return str ;
     }
     
@@ -244,9 +218,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = Connection_ID2(str) ;
         str = Sequence(str) ;
         str = str.insert(0,id) ;
-        
-        //StringContains(str,"ClearConnection") ;
-        
         return str ;
     }
     
@@ -271,9 +242,6 @@ public class CallControl_Services_SiemensHipath3000 extends CSTA_Layer_7_Common{
         str = Connection_ID2(str) ;
         str = Sequence(str) ;
         str = str.insert(0,id) ;
-        
-        //StringContains(str,"ClearConnection") ;
-        
         return str ;
     }
     

@@ -113,10 +113,6 @@ public class ConnectionCleared_EricssonAppLink4 extends CallEvent_Base {
 		_sb = _sb.append(set_initiatingDevice());
 		_sb = _sb.append(set_localConnectionInfo());
 		_sb = _sb.append(set_cause());
-
-		// _sb =
-		// _sb.append(0x63).append(0x07).append(0x30).append(0x05).append(0x80).append(0x03).append(
-		// initiatingDevice.get_deviceID().getValue() ) ;
 		return _sb;
 	}
 

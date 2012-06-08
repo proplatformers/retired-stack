@@ -58,7 +58,6 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base {
 		deviceID = new DeviceID_EricssonAppLink4();
 	}
 
-	// asterisk
 	/**
 	 * @param _ext
 	 */
@@ -84,7 +83,6 @@ public abstract class DetailedDeviceID_EricssonAppLink4 extends CSTA_Base {
 		return str;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */

@@ -194,10 +194,6 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base {
 		_sb = _sb.append(set_initiatingDevice());
 		_sb = _sb.append(set_localConnectionInfo());
 		_sb = _sb.append(set_cause());
-
-		// _sb =
-		// _sb.append(0x63).append(0x07).append(0x30).append(0x05).append(0x80).append(0x03).append(
-		// initiatingDevice.get_deviceID().getValue() ) ;
 		return _sb;
 	}
 
@@ -255,34 +251,22 @@ public class ServiceInitiated_EricssonAppLink4 extends CallEvent_Base {
 	 */
 	public String set_cause() {
 		return cause.set_cause();
-		// char[] ar_cause = { 0x0A,0x01,cause.get_value() } ;
-		// return (new String(ar_cause)) ;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */
 	public String set_localConnectionInfo() {
 		return localConnectionInfo.set_localConnectionState();
-		// char[] ar_lci = {0x4E,0x01, localConnectionInfo.get_value() } ;
-		// return (new String(ar_lci)) ;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */
 	public String set_initiatingDevice() {
 		return (initiatingDevice.set_deviceID());
-		// int length =
-		// this.initiatingDevice.get_deviceID().get_value().length() ;
-		// char[] ar_inidev = { 0x63, (char)length} ;
-		// return (new String(ar_inidev) +
-		// this.initiatingDevice.get_deviceID().get_value() ) ;
 	}
 
-	// asterisk
 	/**
 	 * @return
 	 */

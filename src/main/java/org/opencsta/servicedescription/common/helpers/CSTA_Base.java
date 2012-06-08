@@ -182,20 +182,14 @@ public abstract class CSTA_Base {
 		// (<=0x80)
 		if (curInStr.charAt(1) == 0x81) {
 			// E.G. a1 81 9e 2 2 5d 73 ....OR 0x30 0x81 0x94
-			// StringContains(curInStr, "\nBefore") ;
 			curInStr = DeleteChars(curInStr, (normalCase + 1));
-			// StringContains(curInStr, "\nAfter") ;
 		} else if (curInStr.charAt(1) == 0x82) {
 			// E.G. a1 82 1 29 2 2 5d 73 .... OR 0x30 0x82 0x01 0x29
-			// StringContains(curInStr, "\nBefore") ;
 			curInStr = DeleteChars(curInStr, (normalCase + 2));
-			// StringContains(curInStr, "\nAfter") ;
 			// STC: WITH A CONFERENCED EVENT
 		} else {// MUST BE 0xXX WHERE 'XX' IS THE LENGTH
 				// E.G. a1 XX 2 2 5d .... OR 0x30 0xXX
-				// StringContains(curInStr, "\nBefore") ;
 			curInStr = DeleteChars(curInStr, (normalCase));
-			// StringContains(curInStr, "\nAfter") ;
 		}
 
 		return curInStr;

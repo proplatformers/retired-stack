@@ -38,7 +38,6 @@ public class LocalDeviceID extends DetailedDeviceID {
 		super(_ext);
 	}
 
-	// asterisk
 	/*
 	 * (non-Javadoc)
 	 * 

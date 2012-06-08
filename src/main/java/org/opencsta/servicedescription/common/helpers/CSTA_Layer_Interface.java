@@ -88,9 +88,4 @@ public interface CSTA_Layer_Interface {
      *
      */
 	String DLEENQ = new String(dleenq);
-
-	// void PassedUp(String curInStr) ;
-	// boolean FromAbove(String curOutStr) throws IOException ;
-	// void Strip(String curInStr) ;
-	// String Wrap(String curOutStr) throws IOException;
 }

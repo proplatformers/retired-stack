@@ -43,7 +43,6 @@ public class LocalDeviceID_EricssonAppLink4 extends
 		super(_ext);
 	}
 
-	// asterisk
 	/*
 	 * (non-Javadoc)
 	 * 
